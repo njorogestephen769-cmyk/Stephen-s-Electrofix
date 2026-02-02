@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stephen Njoroge | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.6;
+        transition: background 0.3s, color 0.3s;
+      }
+
+      body.light {
+        background: #f4f4f4;
+        color: #333;
+      }
+
+      body.dark {
+        background: #1e293b;
+        color: #f4f4f4;
+      }
+
+      a {
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .highlight {
+        color: #1e90ff;
+      }
+
+      .highlight-btn {
+        background: #1e90ff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .highlight-btn:hover {
+        background: #0b66d0;
+      }
+
+      header {
+        padding: 20px 0;
+        text-align: center;
+        transition: background 0.3s;
+      }
+
+      header.light {
+        background: #ffffff;
+      }
+
+      header.dark {
+        background: #0f172a;
+      }
+
+      header h1 {
+        font-size: 2rem;
+        margin-bottom: 5px;
+      }
+
+      header p {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+
+      nav {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      nav a {
+        font-weight: 500;
+      }
+
+      nav a:hover {
+        color: #1e90ff;
+      }
+
+      .theme-toggle {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        border: none;
+      }
+
+      .theme-toggle:hover {
+        opacity: 0.8;
+      }
+
+      section {
+        padding: 60px 20px;
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      section h2 {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 2rem;
+      }
+
+      #about p {
+        max-width: 700px;
+        margin: auto;
+        text-align: center;
+      }
+
+      .projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+      }
+
+      .project {
+        padding: 20px;
+        border-radius: 10px;
+        transition: 0.3s;
+      }
+
+      .project.light {
+        background: #fff;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        color: #333;
+      }
+
+      .project.dark {
+        background: #0f172a;
+        box-shadow: 0 5px 15px rgba(255, 255, 255, 0.05);
+        color: #f4f4f4;
+      }
+
+      .project h3 {
+        margin-bottom: 10px;
+      }
+
+      .project:hover {
+        transform: translateY(-5px);
+      }
+
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .skill {
+        background: #1e90ff;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-weight: 500;
+      }
+
+      form {
+        max-width: 600px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      input,
+      textarea {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+      }
+
+      button {
+        padding: 10px;
+        border: none;
+        background: #1e90ff;
+        color: #fff;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background: #0b66d0;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        transition: background 0.3s, color 0.3s;
+      }
+
+      footer.light {
+        background: #ffffff;
+        color: #333;
+      }
+
+      footer.dark {
+        background: #0f172a;
+        color: #f4f4f4;
+      }
+
+      .tags {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+      }
+
+      .tag {
+        background: #1e90ff;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 3px;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body class="light">
+    <button class="theme-toggle highlight-btn" onclick="toggleTheme()">🌗 Toggle Theme</button>
+    <header class="light">
+      <h1>Stephen Njoroge</h1>
+      <p class="highlight">Professional Skilled Electrician</p>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am Stephen Njoroge, a professional and skilled electrician with expertise in electrical installations, repairs, and servicing. I specialize in shower element repairs, wiring, piping, CCTV, solar systems, and selling a wide range of electrical fittings and lighting solutions. My goal is to provide reliable, high-quality services that meet the needs of my clients efficiently and safely.</p>
+    </section>
+    <section id="projects">
+      <h2>My Projects</h2>
+      <div class="projects">
+        <div class="project light">
+          <h3>Stephen’s Electrofix</h3>
+          <p>Electrical servicing and repairs, including shower element repairs, and selling electrical fittings such as switches (including USB outlets), sockets, shower heads, elements, and all types of lighting, including chandeliers, wall brackets, bulkhead lights, snake lights, and neon lights.</p>
+          <div class="tags">
+            <div class="tag">Shower Element Repair</div>
+            <div class="tag">Servicing</div>
+            <div class="tag">Electrical Fittings</div>
+            <div class="tag">Lighting Solutions</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="skills">
+      <h2>My Skills</h2>
+      <div class="skills">
+        <div class="skill">Electrical Installation</div>
+        <div class="skill">Piping</div>
+        <div class="skill">Wiring & Fittings</div>
+        <div class="skill">CCTV</div>
+        <div class="skill">Solars</div>
+      </div>
+    </section>
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <p style="text-align:center; margin-top:20px;"> Email: <a href="mailto:njorogestephen769@gmail.com">njorogestephen769@gmail.com</a>
+        <br> Call/WhatsApp: <a href="tel:0712518112">0712518112</a>
+      </p>
+    </section>
+    <footer class="light">
+      <p>&copy; 2026 Stephen Njoroge. All rights reserved.</p>
+    </footer>
+    <script>
+      function toggleTheme() {
+        const body = document.body;
+        const header = document.querySelector('header');
+        const footer = document.querySelector('footer');
+        const project = document.querySelector('.project');
+        body.classList.toggle('dark');
+        body.classList.toggle('light');
+        header.classList.toggle('dark');
+        header.classList.toggle('light');
+        footer.classList.toggle('dark');
+        footer.classList.toggle('light');
+        project.classList.toggle('dark');
+        project.classList.toggle('light');
+      }
+    </script>
+  </body>
+</html>
